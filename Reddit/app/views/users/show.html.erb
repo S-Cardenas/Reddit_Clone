@@ -1,0 +1,14 @@
+Hello! <%= @user.username %>
+<br>
+<a href="<%= edit_user_url  %>">Edit User</a>
+<form action="<%= user_url(@user) %>" method="POST">
+  <input
+    type="hidden"
+    name="_method"
+    value="DELETE">
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <input type="submit" value="Delete user">
+</form>

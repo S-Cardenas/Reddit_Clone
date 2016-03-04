@@ -1,0 +1,7 @@
+Post: <%= @post.title %>
+<br>
+<%= @post.content %>
+<br>
+<a href="<%= edit_post_url %>">Edit post</a>
+<br>
+<a href="<%= sub_url(@post.sub_id) %>">Back to subreddit</a>
